@@ -69,6 +69,10 @@ html, body {
     border-radius: 50%;
     filter: grayscale(100%);
     margin: 16px 10px;
+    transition: .5s;
+}
+.card:hover .card-author .author-avatar img{
+    filter: grayscale(0%);
 }
 
 
@@ -93,6 +97,12 @@ html, body {
     font-size: normal;
     font-weight: 700;
     color: #7a7a8c;
+    transition: .5s;
+}
+.card:hover .card-author .author-name .author-name-prefix{
+    font-size: normal;
+    font-weight: 700;
+    color: #ff8a00;
 }
 
 .card:hover .card-header h2 {
