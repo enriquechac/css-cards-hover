@@ -1,0 +1,108 @@
+
+
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #17141d;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100%;
+}
+
+.container  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.card-list {
+    display: flex;
+    padding: 3rem;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 350px;
+    width: 230px;
+    padding: 1rem;
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    transition: .5s;
+}
+
+.card-header {
+    height: 70%;
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+    border: 1px solid #ff8a00;
+}
+
+.card:hover~.card {
+    transform: translateX(130px);
+}
+
+
+.card:not(:first-child) {
+    margin-left: -130px;
+}
+
+
+.card .card-author {
+    position: relative;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    margin: 3rem 0 0;
+}
+
+.card .card-author .author-avatar img{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    margin: 16px 10px;
+}
+
+
+.card .card-author .half-circle {
+    position: absolute;
+    bottom: 0;
+    left: -13px;
+    width: 106px;
+    height: 58px;
+    fill: none;
+    stroke: #ff8a00;
+    stroke-width: 4;
+    stroke-linecap: round;
+    pointer-events: none;
+    transform: scale(0.6);
+}
+.card .card-author .author-name {
+    margin-left: 15px;
+}
+
+.card .card-author .author-name .author-name-prefix{
+    font-size: normal;
+    font-weight: 700;
+    color: #7a7a8c;
+}
+
+.card:hover .card-header h2 {
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-clip: text;
+    border-color: white;
+    cursor: default;
+}
